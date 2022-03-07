@@ -20,7 +20,7 @@ class CreateTravelsTable extends Migration
             $table->date('departure');
             $table->date('arrival');
             $table->float('price', 8, 2);
-            $table->text('travel description');
+            $table->text('travel_description');
             $table->boolean('available');
             $table->timestamps();
         });

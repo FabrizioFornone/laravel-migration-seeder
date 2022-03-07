@@ -14,7 +14,7 @@ class UpdateTravelsTable extends Migration
     public function up()
     {
         Schema::table('travels', function (Blueprint $table) {
-            $table->boolean("pets allowed")->after("travel description");
+            $table->boolean("pets_allowed")->after("travel_description");
             $table->renameColumn('price', 'overall')->change();
         });
     }
@@ -27,7 +27,7 @@ class UpdateTravelsTable extends Migration
     public function down()
     {
         Schema::table('travels', function (Blueprint $table) {
-            $table->dropColumn("pets allowed");
+            $table->dropColumn("pets_allowed");
             $table->renameColumn('overall', 'price')->change();
         });
     }
